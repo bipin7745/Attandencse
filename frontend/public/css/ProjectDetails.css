@@ -1,0 +1,551 @@
+/* Wrapper */
+.pd-wrapper {
+  max-width: 950px;
+  margin: 100px auto;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= LOADER ================= */
+.loader {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* ================= PROJECT CARD ================= */
+.pd-project-card {
+  background: linear-gradient(135deg, #eef2ff, #ffffff);
+  border-radius: 18px;
+  padding: 30px 28px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  margin-bottom: 35px;
+  transition: all 0.3s ease;
+}
+
+.pd-project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+/* ================= HEADER ================= */
+.pd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.pd-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2563eb;
+  margin: 0;
+}
+
+/* ================= DESCRIPTION ================= */
+.pd-desc {
+  margin: 12px 0 20px;
+  color: #374151;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ================= INFO GRID ================= */
+.pd-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.pd-info {
+  background: #ffffff;
+  padding: 15px 12px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.pd-info:hover {
+  background: #f4f6ff;
+}
+
+.pd-info strong {
+  display: block;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.pd-info p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+/* ================= BACK BUTTON ================= */
+.pd-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 25px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2563eb;
+  background: linear-gradient(135deg, #e0f2ff, #ffffff);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+
+.pd-back-btn:hover {
+  background: linear-gradient(135deg, #cfe8ff, #ffffff);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+.pd-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+
+.pd-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2563eb;
+  background: linear-gradient(135deg, #e0f2ff, #ffffff);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+
+.pd-back-btn:hover {
+  background: linear-gradient(135deg, #cfe8ff, #ffffff);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.pd-top-bar h2 {
+  margin: 10px;
+  font-size: 26px;
+  font-weight: 700;
+  color:blue;
+  text-align: right;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .pd-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .pd-top-bar h2 {
+    text-align: left;
+    font-size: 22px;
+  }
+
+  .pd-back-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* ================= PROJECT CARD ================= */
+.pd-project-card {
+  background: linear-gradient(135deg, #eef2ff, #ffffff);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  margin-bottom: 35px;
+  transition: all 0.3s ease;
+}
+
+.pd-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+.pd-header {
+  color: #2563eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pd-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.pd-desc {
+  margin: 12px 0 20px;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.pd-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.pd-info {
+  background: white;
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.pd-info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.pd-info strong {
+  display: block;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 5px;
+}
+
+.pd-info p {
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .pd-project-card {
+    padding: 20px;
+  }
+
+  .pd-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .pd-info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .pd-back-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .pd-header h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ================= START/END DATE ================= */
+.pd-info .pd-date {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ================= ASSIGN TASK BUTTON ================= */
+.assign-task-btn {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.25s ease;
+}
+
+.assign-task-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .pd-info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .pd-project-card {
+    padding: 22px;
+  }
+
+  .pd-header h2 {
+    font-size: 22px;
+  }
+
+  .pd-desc {
+    font-size: 15px;
+  }
+
+  .pd-info p {
+    font-size: 15px;
+  }
+
+  .assign-task-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pd-header h2 {
+    font-size: 20px;
+  }
+
+  .pd-desc {
+    font-size: 14px;
+  }
+
+  .pd-info p {
+    font-size: 14px;
+  }
+
+  .assign-task-btn {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+
+/* Chat Card */
+.pd-chat-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.pd-chat-header {
+  padding: 15px;
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+}
+
+.pd-chat-box {
+  padding: 15px;
+  max-height: 350px;
+  overflow-y: auto;
+  background: #f9fafb;
+}
+.assign-task-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.assign-task-btn:hover {
+  background: #1e40af;
+}
+/* Messages */
+.pd-message {
+  max-width: 75%;
+  padding: 12px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.pd-own {
+  margin-left: auto;
+  background: #dbeafe;
+}
+
+.pd-other {
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.pd-msg-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.pd-user {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.pd-time {
+  color: #6b7280;
+}
+
+.pd-text {
+  font-size: 14px;
+}
+
+/* Reply */
+.pd-reply-preview {
+  background: #e5e7eb;
+  padding: 6px;
+  border-left: 4px solid #3b82f6;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.pd-reply-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Replying Bar */
+.pd-replying {
+  background: #eef2ff;
+  padding: 10px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pd-replying span {
+  margin-left: 6px;
+  color: #374151;
+}
+
+.pd-replying button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Input */
+.pd-input {
+  display: flex;
+  padding: 15px;
+  margin-bottom: 17px;
+  gap: 10px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.pd-input input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+}
+
+.pd-input button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0 22px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+/* ================= REPLY BAR ================= */
+
+.pd-replying {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #eef2ff, #ffffff);
+  border-left: 5px solid #3b82f6;
+  padding: 12px 15px;
+  border-radius: 14px;
+  margin: 10px 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  animation: slideUp 0.25s ease-in-out;
+}
+
+.pd-reply-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 85%;
+}
+
+.pd-reply-label {
+  font-size: 11px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pd-reply-user {
+  font-size: 13px;
+  color: #2563eb;
+}
+
+.pd-reply-text {
+  font-size: 13px;
+  color: #374151;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pd-reply-close {
+  background: #e0e7ff;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #1e3a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+.pd-reply-close:hover {
+  background: #c7d2fe;
+  transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

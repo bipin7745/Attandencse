@@ -1,0 +1,207 @@
+/* Overlay background */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.25s ease forwards;
+}
+
+/* Modal container */
+.modal-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px 36px;
+  width: 400px;
+  max-width: 95vw;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: slideDown 0.3s ease forwards;
+  box-sizing: border-box;
+  text-align: center;
+  color: #111827;
+}
+
+/* Modal Title */
+.modal-box h2 {
+  margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.03em;
+}
+
+/* Form rows */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+/* Time row: side by side */
+.time-row {
+  flex-direction: row;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.time-row > div {
+  flex: 1;
+}
+
+/* Label styling */
+.modal-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+.form-row input[type="date"] {
+  width: 50%; /* takes full width of form-row */
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.8px solid #d1d5db;
+  box-sizing: border-box;
+  color: #111;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-row input[type="date"]:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.5);
+  background-color: #fff;
+}
+/* Inputs and selects */
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.8px solid #d1d5db;
+  box-sizing: border-box;
+  font-family: inherit;
+  color: #111;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.5);
+  background-color: #fff;
+}
+
+.time-input {
+  width: 100%;
+  min-width: 120px;
+}
+
+.ampm-select {
+  cursor: pointer;
+  width: 100%;
+  min-width: 90px;
+}
+
+/* Error message */
+.error {
+  margin-top: 6px;
+  color: #dc3545;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  user-select: none;
+}
+
+/* Modal actions */
+.modal-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Buttons base */
+.modal-actions button {
+  flex: 1;
+  padding: 12px 0;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Primary confirm button */
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+/* Secondary cancel button */
+.btn-secondary {
+  background-color: #6b7280;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #4b5563;
+}
+
+/* Disabled button style */
+.modal-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .modal-box {
+    width: 95vw;
+    padding: 28px 24px;
+  }
+
+  .time-row {
+    flex-direction: column;
+  }
+
+  .time-row > div {
+    min-width: 100%;
+  }
+
+  .modal-actions button {
+    font-size: 0.95rem;
+    padding: 11px 0;
+  }
+}

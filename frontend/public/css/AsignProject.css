@@ -1,0 +1,159 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6fb;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+
+.project-list-page {
+  max-width: 1200px;
+  margin-top:100px;
+  padding: 0 20px;
+}
+
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.project-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3498db;
+  margin: 0;
+}
+
+
+.toggle-form-btn {
+  background: linear-gradient(135deg, #3498db, #3498db);
+  color: #fff;
+  border: none;
+  padding: 11px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toggle-form-btn:hover {
+  opacity: 0.9;
+}
+
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+
+.project-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-header {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.project-name {
+  font-size: 18px;
+  font-weight: 600;
+  color:#3498db;
+  margin: 0;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  min-height: 42px;
+}
+
+
+.card-info {
+  margin-top: auto;
+}
+
+.card-info p {
+  font-size: 13.5px;
+  color: #374151;
+  margin: 6px 0;
+}
+
+.card-info strong {
+  color: #1f2937;
+}
+
+/* ===============================
+   STATES
+================================ */
+.loading,
+.error,
+.empty {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.loading {
+  color: #4f46e5;
+}
+
+.error {
+  color: #ef4444;
+}
+
+.empty {
+  color: #6b7280;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .toggle-form-btn {
+    width: 100%;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+}

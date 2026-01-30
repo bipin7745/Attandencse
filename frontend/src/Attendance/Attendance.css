@@ -1,0 +1,326 @@
+/* ================= CONTAINER ================= */
+.attendance-container {
+  min-height: 86vh;
+  padding: 1rem 1rem;
+  margin: 70px auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header row: title left, filters right */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* responsive */
+  gap: 15px;
+}
+
+.attendance-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+/* Filters row */
+.filters-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filters-row input,
+.filters-row select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  min-width: 160px;
+  transition: all 0.2s;
+}
+
+.filters-row input:focus,
+.filters-row select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.4);
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 20px;
+  font-weight: 600;
+  color: #374151;
+}
+
+
+
+/* ================= HEADER ROW ================= */
+.action-buttons1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* LEFT title, RIGHT buttons */
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+
+/* Right Buttons */
+.action-btn-group {
+  display: flex;
+  gap: 12px;
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.btn-in {
+  background-color: #16a34a;
+}
+.btn-in:hover {
+  background-color: #15803d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(22,163,74,0.3);
+}
+
+.btn-out {
+  background-color: #dc2626;
+  margin-right: 20px;
+}
+.btn-out:hover {
+  background-color: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220,38,38,0.3);
+}
+.btn-request {
+  background: #2563eb;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.btn-request:hover {
+  background: #1d4ed8;
+  color: #fff;
+}
+/* ================= ROLE BUTTONS ================= */
+.role-btn-wrapper {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.role-btn {
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  cursor: default;
+}
+
+/* Employee = Green */
+.employee-btn {
+  background-color: #16a34a;
+}
+
+.employee-btn:hover {
+  background-color: #15803d;
+}
+
+/* Project Manager = Blue */
+.manager-btn {
+  background-color: #2563eb;
+}
+
+.manager-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Default = Gray */
+.default-btn {
+  background-color: #6c757d;
+}
+
+.default-btn:hover {
+  background-color: #5a6268;
+}
+
+/* ================= TABLE ================= */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid #dee2e6;
+  padding: 10px 8px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.attendance-table th {
+  background-color: #1d4ed8;
+  color: white;
+  font-weight: 600;
+}
+
+.attendance-table tr:nth-child(even) {
+  background-color: #f2f6ff;
+}
+
+.no-attendance {
+  text-align: center;
+  padding: 15px;
+  font-style: italic;
+  color: #6c757d;
+}
+
+/* ================= SESSION BADGES ================= */
+.session-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin: 2px 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-in {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.badge-out {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* ================= STATUS ================= */
+.status {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+  min-width: 90px;
+  text-align: center;
+}
+
+/* Pending = Yellow */
+.status.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #facc15;
+}
+
+/* Approved = Green */
+.status.approved {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #22c55e;
+}
+
+/* Rejected = Red */
+.status.rejected {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+/* ================= HOURS & BREAK ================= */
+.hours-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hours {
+  color: #198754;
+}
+
+.break {
+  color: #dc2626;
+  font-size: 13px;
+}
+
+/* ================= LOADING ================= */
+.loading {
+  text-align: center;
+  padding: 20px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters-row {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filters-row input,
+  .filters-row select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .action-buttons1 {
+    flex-direction: column;
+    align-items: center;
+  }
+ .action-btn-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .attendance-table th,
+  .attendance-table td {
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .session-badge {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+}

@@ -1,0 +1,136 @@
+/* Dashboard.css */
+
+.dashboard-container {
+  margin-top: 100px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2f7, #f9fbfd);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Title */
+.dashboard-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #0652f6;
+  text-align: center;
+}
+
+/* Loading / Error */
+.dashboard-loading,
+.dashboard-error {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 60px;
+  color: #555;
+}
+
+/* ===================== */
+/* ✅ FIXED GRID LAYOUT */
+/* ===================== */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px); /* ✅ always 3 cards */
+  gap: 30px;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card Base (UNCHANGED) */
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon */
+.stat-icon {
+  font-size: 2.8rem;
+  color: white;
+  padding: 18px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text */
+.stat-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.stat-card p {
+  margin: 6px 0 0;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+/* Themes */
+.stat-card.staff .stat-icon {
+  background: linear-gradient(135deg, #3498db, #5dade2);
+}
+.stat-card.staff p {
+  color: #3498db;
+}
+
+.stat-card.projects .stat-icon {
+  background: linear-gradient(135deg, #2ecc71, #58d68d);
+}
+.stat-card.projects p {
+  color: #2ecc71;
+}
+
+.stat-card.tasks .stat-icon {
+  background: linear-gradient(135deg, #f39c12, #f8c471);
+}
+.stat-card.tasks p {
+  color: #f39c12;
+}
+
+.stat-card.devices .stat-icon {
+  background: linear-gradient(135deg, #9b59b6, #af7ac5);
+}
+.stat-card.devices p {
+  color: #9b59b6;
+}
+
+.stat-card.assigned .stat-icon {
+  background: linear-gradient(135deg, #fd3a0e, #f84f07);
+}
+.stat-card.assigned p {
+  color: #f05507;
+}
+
+/* ===================== */
+/* Responsive */
+/* ===================== */
+@media (max-width: 1024px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 300px); /* tablet = 2 cards */
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-container {
+    grid-template-columns: 1fr; /* mobile = 1 card */
+  }
+
+  .stat-card {
+    width: 100%;
+  }
+}

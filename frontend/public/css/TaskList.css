@@ -1,0 +1,116 @@
+/* Wrapper for the whole task section */
+.task-wrapper {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #f7f8fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.task-wrapper h4 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Scrollable container for tasks */
+.task-scroll {
+  max-height: 420px; /* approx 3 task cards */
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Optional: nice scrollbar */
+.task-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-scroll::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+/* Individual task card */
+.task-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Task header (title + estimated days) */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Task title */
+.task-header h5 {
+  margin: 0;
+  color: #2563eb;
+  font-size: 1.2rem;
+}
+
+/* Estimated days badge */
+.task-header span {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Task description */
+.task-card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Assigned user and dates styling */
+.task-card p:first-of-type {
+  font-weight: 500;
+}
+
+.task-card p span {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Responsive: smaller screens */
+@media (max-width: 600px) {
+  .task-wrapper {
+    padding: 10px;
+  }
+
+  .task-card {
+    padding: 12px 15px;
+  }
+
+  .task-header h5 {
+    font-size: 1rem;
+  }
+
+  .task-header span {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+  }
+}

@@ -1,0 +1,153 @@
+.attendance-container {
+  min-height: 86vh;
+  padding: 1.5rem;
+  margin: 70px auto;
+  background: #f9fafb;
+  border-radius: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.attendance-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+/* Table */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.attendance-table th {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.attendance-table tr:nth-child(even) {
+  background: #f2f6ff;
+}
+
+.no-attendance {
+  padding: 20px;
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* Role */
+.role-btn-wrapper {
+  margin-top: 6px;
+}
+
+.role-btn {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+}
+
+.employee-btn {
+  background: #16a34a;
+}
+
+.manager-btn {
+  background: #2563eb;
+}
+
+/* Status */
+.status {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status.approved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Buttons */
+.btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-sm {
+  font-size: 14px;
+}
+
+.btn-success {
+  background: #22c55e;
+  color: white;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+}
+
+.btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Session badge */
+.session-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-in {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-out {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .attendance-table th,
+  .attendance-table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}

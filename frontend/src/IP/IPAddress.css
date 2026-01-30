@@ -1,0 +1,222 @@
+/* ===== Global Container ===== */
+
+.ip-container {
+  min-height: 90vh;
+  padding: 2rem;
+  margin-top: 50px;
+  background-color: #f9fafb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== Header ===== */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+/* ===== Page Title ===== */
+.ip-container h1 {
+  font-size: 26px;
+  font-weight: 600;
+   color:#007bff ;
+}
+
+/* ===== Primary Button ===== */
+.open-btn {
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.open-btn:hover {
+  background-color: #4338ca;
+}
+.open-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.info-text {
+  color: #d9534f;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.edit-icon {
+  cursor: pointer;
+  color: #007bff;
+}
+/* ===== Table ===== */
+.table-wrapper {
+  margin-top: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.ip-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-color: #22c55e;
+}
+
+.ip-table th,
+.ip-table td {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.ip-table thead {
+  background-color: #eef2ff;
+}
+
+.ip-table th {
+  font-size: 14px;
+  font-weight: 600;
+  color:white;
+  text-align: center;
+}
+
+
+.ip-table tbody tr {
+  border-top: 1px solid #e5e7eb;
+}
+.ip-table tbody td {
+  text-align: center;
+}
+
+
+.ip-text {
+  font-weight: 500;
+  color: #111827;
+}
+
+.no-data {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+}
+
+/* ===== Modal ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  width: 100%;
+  max-width: 380px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-box h2 {
+  text-align: center;
+  color: #4f46e5;
+  margin-bottom: 20px;
+}
+
+/* ===== Form ===== */
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.modal-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.modal-box input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* ===== Buttons ===== */
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.modal-actions button[type="submit"] {
+  background-color: #22c55e;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* ===== Messages ===== */
+.success {
+  margin-top: 10px;
+  text-align: center;
+  color: #16a34a;
+  font-size: 14px;
+}
+
+.error {
+  margin-top: 10px;
+  text-align: center;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 480px) {
+  .header-row {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .modal-box {
+    margin: 0 15px;
+  }
+}

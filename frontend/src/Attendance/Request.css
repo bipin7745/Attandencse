@@ -1,0 +1,233 @@
+/* Modal overlay to darken the background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Modal container box */
+.modal-box {
+  background: white;
+  border-radius: 10px;
+  padding: 24px 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  animation: fadeInScale 0.25s ease forwards;
+}
+
+/* Modal header */
+.modal-box h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* Each attendance check row */
+.check-entry {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+/* Select dropdown for type and AM/PM */
+.check-entry select {
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  transition: border-color 0.2s ease;
+  cursor: pointer;
+  flex-basis: 20%;
+}
+
+.check-entry select:hover:not(:disabled) {
+  border-color: #2c7be5;
+}
+
+/* Disabled input for type */
+.check-entry input[disabled] {
+  background-color: #f0f2f5;
+  border: 1.8px solid #d1d5db;
+  color: #6c757d;
+  text-align: center;
+  cursor: not-allowed;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  flex-basis: 20%;
+  user-select: none;
+}
+
+/* Time input styles */
+.check-entry input[type="time"] {
+  flex-grow: 1;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s ease;
+}
+
+.check-entry input[type="time"]:hover {
+  border-color: #2c7be5;
+}
+
+/* Remove check button */
+.check-entry button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.check-entry button:hover {
+  background-color: #b02a37;
+}
+
+/* Add more button */
+.modal-box > button {
+  background-color: #2c7be5;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 16px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.modal-box > button:hover {
+  background-color: #2056b3;
+}
+
+/* Reason textarea */
+textarea {
+  width: 100%;
+  min-height: 90px;
+  font-size: 1rem;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1.8px solid #ccc;
+  resize: vertical;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #2c7be5;
+  box-shadow: 0 0 8px rgba(44, 123, 229, 0.3);
+}
+
+/* Error message */
+.error {
+  color: #dc3545;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Modal action buttons container */
+.modal-actions {
+  display: flex;
+  gap: 14px;
+}
+
+/* Cancel and Send Request buttons */
+.modal-actions button {
+  flex: 1;
+  padding: 12px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.modal-actions button:first-child {
+  background-color: #f0f0f0;
+  color: #444;
+}
+
+.modal-actions button:first-child:hover {
+  background-color: #d6d6d6;
+}
+
+.modal-actions button:last-child {
+  background-color: #2c7be5;
+  color: white;
+}
+
+.modal-actions button:last-child:disabled {
+  background-color: #8bb6f9;
+  cursor: not-allowed;
+}
+
+.modal-actions button:last-child:hover:not(:disabled) {
+  background-color: #2056b3;
+}
+
+/* Animations */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .modal-box {
+    padding: 20px 16px;
+    max-width: 95vw;
+  }
+
+  .check-entry select,
+  .check-entry input[disabled] {
+    flex-basis: 25%;
+    font-size: 0.9rem;
+  }
+
+  .check-entry input[type="time"] {
+    font-size: 0.9rem;
+  }
+
+  .modal-actions button {
+    font-size: 0.95rem;
+    padding: 10px 0;
+  }
+}

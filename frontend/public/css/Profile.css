@@ -1,0 +1,147 @@
+/* Container */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: #f5f6fa;
+}
+
+/* Card */
+.profile-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 40px 30px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+.profile-title {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Avatar */
+.profile-avatar-container {
+  display: flex;           /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center;  
+  margin-bottom: 30px;   /* Center vertically (optional) */
+}
+
+
+/* Info rows */
+.profile-info-container {
+  margin-bottom: 30px;
+}
+
+.profile-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: #f0f1f5;
+  border-radius: 8px;
+}
+
+.profile-info-icon {
+  color: #667eea;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.profile-info-text {
+  font-size: 1rem;
+  color: #333;
+  word-break: break-word;
+}
+
+/* Buttons */
+.profile-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 15px;
+  background: #667eea;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-btn:hover {
+  background: #764ba2;
+}
+
+
+.edit-btn {
+  background-color: #667eea;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #5a67d8;
+}
+
+.logout-btn {
+  background-color: #f56565;
+  color: #fff;
+}
+
+.logout-btn:hover {
+  background-color: #e53e3e;
+}
+
+/* Loader */
+.spinner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .profile-card {
+    padding: 30px 20px;
+  }
+
+  .profile-title {
+    font-size: 1.5rem;
+  }
+
+  .profile-info-row {
+    font-size: 0.95rem;
+  }
+}

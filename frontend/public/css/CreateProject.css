@@ -1,0 +1,195 @@
+/* CreateProject.css */
+
+.create-project-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.create-project-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #007bff;
+}
+
+.cp-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 100vh;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.back-btn {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 15px;
+  transition: color 0.3s;
+  align-self: flex-start;
+}
+
+
+
+.cp-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.cp-field label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.cp-field input[type="text"],
+.cp-field input[type="number"],
+.cp-field textarea,
+.cp-field select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+  resize: vertical;
+}
+
+.cp-field input[type="text"]:focus,
+.cp-field input[type="number"]:focus,
+.cp-field textarea:focus,
+.cp-field select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.cp-subtitle {
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #444;
+  display: block;
+}
+
+.cp-selected-box {
+  margin-bottom: 15px;
+}
+
+.cp-chip {
+  display: inline-flex;
+  align-items: center;
+  background: #e0e7ff;
+  color: #334155;
+  border-radius: 20px;
+  padding: 6px 12px;
+  margin: 4px 6px 4px 0;
+  font-size: 13px;
+}
+
+.cp-chip button {
+  background: transparent;
+  border: none;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  color: #334155;
+  transition: color 0.3s;
+}
+
+.cp-chip button:hover {
+  color: #ff4d4d;
+}
+
+.cp-employee-box {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  max-height: 220px;
+}
+
+.cp-search {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.cp-select-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cp-select-row label {
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+  color: #555;
+}
+
+.cp-select-row button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+
+.cp-emp-list {
+  max-height: 100px;
+  overflow-y: auto;
+  border-top: 1px solid #eee;
+  padding-top: 8px;
+}
+
+.cp-emp-list label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+}
+
+.cp-emp-list input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.cp-submit {
+  background-color: #007bff;
+  border: none;
+  margin-top: 20px;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  justify-content: center;
+}
+
+.cp-submit:disabled {
+  background-color: #a1c4fd;
+  cursor: not-allowed;
+}
+
+.cp-submit:not(:disabled):hover {
+  background-color: #0056b3;
+}
